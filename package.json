@@ -9,16 +9,25 @@
     "deploy": "sst deploy",
     "remove": "sst remove",
     "console": "sst console",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "test": "sst bind vitest run"
   },
   "devDependencies": {
-    "sst": "^2.26.9",
+    "@tsconfig/node18": "^18.2.2",
+    "@types/aws-lambda": "^8.10.122",
+    "@types/uuid": "^9.0.4",
     "aws-cdk-lib": "2.95.1",
     "constructs": "10.2.69",
+    "sst": "^2.26.9",
     "typescript": "^5.2.2",
-    "@tsconfig/node18": "^18.2.2"
+    "vitest": "^0.34.6"
   },
   "workspaces": [
     "packages/*"
-  ]
+  ],
+  "dependencies": {
+    "aws-lambda": "^1.0.7",
+    "aws-sdk": "^2.1467.0",
+    "uuid": "^9.0.1"
+  }
 }
